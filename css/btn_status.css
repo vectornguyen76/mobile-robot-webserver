@@ -1,0 +1,110 @@
+.button-row {
+    display: -webkit-inline-box;
+    display: -moz-inline-box;
+    display: inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  .button-row > div {
+    position: relative;
+    width: 160px;
+    height: 50px;
+    margin: 0 15px;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective: 1000px;
+  }
+  .button-row > div > a {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translateZ(-25px);
+    -moz-transform: translateZ(-25px);
+    -ms-transform: translateZ(-25px);
+    -o-transform: translateZ(-25px);
+    transform: translateZ(-25px);
+    -webkit-transition: -webkit-transform 0.25s;
+    -moz-transition: -moz-transform 0.25s;
+    transition: transform 0.25s;
+  }
+  .button-row > div > a::before, .button-row > div > a::after {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 160px;
+    height: 50px;
+    position: absolute;
+    border: 5px solid black;
+    box-sizing: border-box;
+    content: attr(title);
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .button-row > div > a::before {
+    background-color: #000;
+    color: #fff;
+    -webkit-transform: rotateY(0deg) translateZ(25px);
+    -moz-transform: rotateY(0deg) translateZ(25px);
+    -ms-transform: rotateY(0deg) translateZ(25px);
+    -o-transform: rotateY(0deg) translateZ(25px);
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  .button-row > div > a::after {
+    background-color: #fff;
+    border-color: #000;
+    color: #000;
+    -webkit-transform: rotateX(90deg) translateZ(25px);
+    -moz-transform: rotateX(90deg) translateZ(25px);
+    -ms-transform: rotateX(90deg) translateZ(25px);
+    -o-transform: rotateX(90deg) translateZ(25px);
+    transform: rotateX(90deg) translateZ(25px);
+  }
+  .button-row > div > a:hover {
+    -webkit-transform: translateZ(-25px) rotateX(-90deg);
+    -moz-transform: translateZ(-25px) rotateX(-90deg);
+    -ms-transform: translateZ(-25px) rotateX(-90deg);
+    -o-transform: translateZ(-25px) rotateX(-90deg);
+    transform: translateZ(-25px) rotateX(-90deg);
+  }
+  
+  /* this is just icing */
+  .button-row{
+    font-family: "Oswald", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .btn_status {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 63px;
+  }
+  .lb_result{
+    margin-top: 30px;
+    
+  }
